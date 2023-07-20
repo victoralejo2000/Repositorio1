@@ -1,0 +1,64 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+}
+:root {
+	--color-1: #03bfb1;
+	--color-2: #33c361;
+	--color-3: #0f98c6;
+	--color-4: #005b92;
+}
+.texto {
+	color: #f2f2f2;
+	font-size: 2rem;
+	font-family: sans-serif;
+}
+
+.seccion-comun {
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header {
+	background-color: var(--color-1);
+}
+
+nav {
+	background-color: var(--color-2);
+}
+
+footer {
+	background-color: var(--color-2);
+}
+
+main {
+	display: flex;
+	flex: 1;
+	gap: 1rem;
+}
+
+main > aside {
+	width: 240px;
+	background-color: var(--color-2);
+}
+main > section {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+main > section > article {
+	flex: 1;
+	background-color: #0f98c6;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}

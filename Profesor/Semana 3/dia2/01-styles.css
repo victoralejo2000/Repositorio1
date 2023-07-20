@@ -1,0 +1,25 @@
+body {
+	background-color: aquamarine;
+	color: white;
+}
+
+@media (min-width: 600px) {
+	body {
+		background-color: antiquewhite;
+	}
+}
+@media (min-width: 768px) {
+	body {
+		background-color: brown;
+	}
+}
+@media (min-width: 992px) {
+	body {
+		background-color: cadetblue;
+	}
+}
+@media (min-width: 1200px) {
+	body {
+		background-color: blueviolet;
+	}
+}

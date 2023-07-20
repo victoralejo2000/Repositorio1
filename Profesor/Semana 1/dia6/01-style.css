@@ -1,0 +1,20 @@
+.nav__main .link .hover {
+	color: red;
+}
+
+.nav__secondary .link .hover {
+	color: aqua;
+}
+
+.noticia {
+	border: 1px solid red;
+}
+
+.noticia > .noticia__texto {
+	font-style: italic;
+	color: darkblue;
+}
+
+tbody > tr {
+	background-color: aqua;
+}

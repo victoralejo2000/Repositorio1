@@ -1,0 +1,19 @@
+.body {
+  align-items: center;
+  justify-content: center;
+  background-image: url(../images/Fon_StarWars.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.fondo {
+  background-color: hsla(222, 14%, 15%, 0.75);
+  max-width: 18rem;
+  padding: 2rem;
+  border-radius: 1rem;
+}

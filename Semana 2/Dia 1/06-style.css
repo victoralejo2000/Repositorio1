@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+main {
+    min-height: 100vh;
+    border: 2px solid red;
+    background-color: #fafafa;
+    background-image: url(./imagen/textura.jpg);
+    background-repeat: repeat-y;
+}
+
+section {
+    background-color:#fb3;
+    background-image: url(./imagen/textura.jpg);
+    background-repeat: no-repeat;
+}

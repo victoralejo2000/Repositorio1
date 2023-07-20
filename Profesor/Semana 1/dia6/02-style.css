@@ -1,0 +1,38 @@
+li:nth-child(odd) {
+	border: 1px solid brown;
+	border-radius: 4px;
+}
+
+li:nth-child(even) {
+	border: 1px solid aqua;
+	border-radius: 4px;
+}
+
+li:first-child {
+	background-color: #ccc;
+}
+
+li:last-child {
+	background-color: #555;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > tbody > tr:nth-child(even) {
+	background-color: #eaeaea;
+}
+
+tr > td,
+tr > th {
+	border: 1px solid #ccc;
+	padding: 8px;
+}
+
+tr > th {
+	background-color: #fc3443;
+	color: white;
+	padding-top: 16px;
+	padding-bottom: 16px;
+}

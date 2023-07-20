@@ -1,0 +1,40 @@
+*{
+    border: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.whatsapp {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 5;
+}
+
+.circulo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: #888 0px 0px 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
+section {
+    border: 1px solid blue;
+    height: 500px;
+    background-color: #b4b4b4;
+    position: relative;
+}
+
+.mensaje {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+}

@@ -1,0 +1,64 @@
+/* estilos por tag */
+/*  h1 {
+  color: red;
+}
+
+h1 {
+  color: brown;
+}
+
+p{
+  color: blue;
+}
+span {
+  color: violet;
+}
+
+
+/* selectores por clasess */
+
+.nombre {
+  color: green;
+  border: 5px solid red;
+}
+
+.secundario {
+  color: blue;
+}
+
+/* selectores por ID` */
+#primary{
+    color: blueviolet;
+}
+#primary{
+    color: green;
+}
+
+/* selector universal */
+
+/* *{
+    color: red;
+} */
+/* 
+
+selctores por atributo
+ */
+
+input[type="text"]{
+    border: solid orange 3px;
+}
+
+input[type="number"]{
+    border: solid green 3px;
+}
+/* selctor descendente */
+
+div p h2{
+    color: red;
+}
+
+/* slector hermnano adyacente */
+
+h1 + p{
+    color: blue;
+}

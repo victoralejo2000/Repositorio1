@@ -1,0 +1,18 @@
+/* 
+Esta clase avanzamos CSS en cascada
+*/
+section {
+  color: peru;
+}
+
+/* 
+Si 2 reglas tienen el mismo nivel de especificidad
+afectando a un mismo elemento, la ultima regla
+es la que prevalece
+*/
+p {
+  color: blue;
+}
+p {
+  color: rebeccapurple;
+}

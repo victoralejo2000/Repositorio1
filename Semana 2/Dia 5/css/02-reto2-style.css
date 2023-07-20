@@ -1,0 +1,20 @@
+* {
+    border: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.borde {
+    background-color: red;
+    border-radius: .5rem;
+    width: 250px;
+    height: 250px;
+}
+
+.fondo{
+    background-color: white;
+    border-radius: .5rem;
+    width: 230px;
+    height: 230px;
+
+}

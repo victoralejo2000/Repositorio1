@@ -1,0 +1,31 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: red;
+}
+
+h1 {
+	text-align: center;
+	background-color: brown;
+	letter-spacing: 0.5rem;
+	word-spacing: 1rem;
+}
+
+.subtitulo {
+	text-align: center;
+	background-color: yellow;
+	text-decoration: line-through;
+}
+
+span {
+	background-color: aqua;
+}
+
+.parrafo {
+	line-height: 2rem;
+}

@@ -1,0 +1,29 @@
+
+:root{
+	--color-1: #03bfb1;
+	--color-2: #33c361;
+	--color-3: #0f98c6;
+	--color-4: #005b92;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.seccion-comun {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    background-color: var(--color-1);
+}
+
+
+footer {
+    background-color: var(--color-3);
+}

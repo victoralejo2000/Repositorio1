@@ -1,0 +1,40 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+}
+
+header {
+	height: 60px;
+	background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+a {
+	text-decoration: none;
+	color: #f0f0f0;
+}
+
+li {
+	display: inline-block;
+	width: 100px;
+	border: 1px solid yellow;
+	height: 60px;
+	padding: 1rem;
+}
+
+.card .card__image img {
+	width: 200px;
+	height: 200px;
+}
+
+.card {
+	box-shadow: #888 0px 0px 15px;
+	width: 200px;
+	cursor: pointer;
+}
+.card button {
+	display: none;
+}
+
+.card:hover button {
+	display: inline;
+}

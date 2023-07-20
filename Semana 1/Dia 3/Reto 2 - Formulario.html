@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reto 2 - Formulario</title>
+  </head>
+  <body>
+    <header>
+      <h1>Formularios - Reto Grupal 2</h1>
+    </header>
+    <main>
+      <section>
+        <form>
+          <table
+            border="0"
+            bgcolor="#ff8000"
+            bordercolor="#000000"
+            cellspacing="0"
+            cellpadding="3"
+            width="400"
+          >
+            <tr height="30">
+              <th colspan="2" align="left">
+                <font color="#FFE133">Sign Up</font>
+              </th>
+            </tr>
+            <tr>
+              <td bgcolor="#000000" align="right">
+                <label for="id_nombre"
+                  ><font color="#FFE133">First Name</font></label
+                >
+              </td>
+              <td bgcolor="#000000">
+                <input
+                  type="text"
+                  name="v_nombre"
+                  id="id_nombre"
+                  placeholder="Enter First Name"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#000000" align="right">
+                <label for="id_apellido"
+                  ><font color="#FFE133">Last Name</font></label
+                >
+              </td>
+              <td bgcolor="#000000">
+                <input
+                  type="text"
+                  name="v_apellido"
+                  id="id_apellido"
+                  placeholder="Enter Last Name"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#000000" align="right">
+                <label for="id_fecnac"
+                  ><font color="#FFE133">Date of Birth</font></label
+                >
+              </td>
+              <td bgcolor="#000000">
+                <select name="v_dia_nac" id="id_fecdia">
+                  <option value="">Dia</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30">30</option>
+                </select>
+                <select name="v_mes_nac" id="id_fecmes">
+                  <option value="">Mes</option>
+                  <option value="1">Enero</option>
+                  <option value="2">Febrero</option>
+                  <option value="3">Marzo</option>
+                  <option value="4">Abril</option>
+                  <option value="5">Mayo</option>
+                  <option value="6">Junio</option>
+                  <option value="7">Julio</option>
+                  <option value="8">Agosto</option>
+                  <option value="9">Setiembre</option>
+                  <option value="10">Octubre</option>
+                  <option value="11">Noviembre</option>
+                  <option value="12">Diciembre</option>
+                </select>
+                <select name="v_anio_nac" id="id_fecanio">
+                  <option value="">Año</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#000000" align="right">
+                <label for="id_genero"
+                  ><font color="#FFE133">Gender</font>font></label
+                >
+              </td>
+              <td bgcolor="#000000">
+                <input
+                  type="radio"
+                  id="id_masculino"
+                  name="v_genero"
+                  value="M"
+                  required
+                />
+                <label for="id_masculino"
+                  ><font color="#FFE133">Male</font></label
+                >
+                <input
+                  type="radio"
+                  id="id_femenino"
+                  name="v_genero"
+                  value="F"
+                  required
+                />
+                <label for="id_femenino"
+                  ><font color="#FFE133">Female</font></label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#000000" align="right">
+                <label for=""><font color="#FFE133">Country</font></label>
+              </td>
+              <td bgcolor="#000000">
+                <select name="v_pais" id="id_pais">
+                  <option value="">Seleccionar</option>
+                  <option value="PER">Peru</option>
+                  <option value="BOL">Bolivia</option>
+                  <option value="ECU">Ecuador</option>
+                  <option value="COL">Colombia</option>
+                  <option value="BRA">Brasil</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#000000" align="right">
+                <label for=""><font color="#FFE133">E-mail</font></label>
+              </td>
+              <td bgcolor="#000000">
+                <input
+                  type="email"
+                  name="v_correo"
+                  id="id_correo"
+                  placeholder="Ejm: juan@miempresa.com"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#000000" align="right">
+                <label for=""><font color="#FFE133">Phone</font></label>
+              </td>
+              <td bgcolor="#000000">
+                <input
+                  type="text"
+                  name="v_telefono"
+                  id="id_telefono"
+                  maxlength="10"
+                  pattern="[0-9]+"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#000000" align="right">
+                <label for=""><font color="#FFE133">Password</font></label>
+              </td>
+              <td bgcolor="#000000">
+                <input
+                  type="password"
+                  name="v_password"
+                  id="id_password"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#000000" align="right">
+                <label for=""
+                  ><font color="#FFE133">Confirm Password</font></label
+                >
+              </td>
+              <td bgcolor="#000000">
+                <input
+                  type="password"
+                  name="v_cpassword"
+                  id="id_cpassword"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#000000"></td>
+              <td bgcolor="#000000">
+                <input
+                  type="checkbox"
+                  id="id-agree"
+                  name="v_agree"
+                  value="Y"
+                  required
+                />
+                <font color="#FFE133"
+                  >I Agree to the
+                  <a href="terms.html" target="_blank">Terms of use</a></font
+                >
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" align="right">
+                <button
+                  type="submit"
+                  style="
+                    background-color: #4caf50; /* Green */
+                    border: none;
+                    color: white;
+                    padding: 5px 10px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 11px;
+                    margin: 4px 2px;
+                    cursor: pointer;
+                  "
+                >
+                  Enviar
+                </button>
+                &nbsp;
+                <button
+                  type="reset"
+                  style="
+                    background-color: #f44336; /* Red */
+                    border: none;
+                    color: white;
+                    padding: 5px 10px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 11px;
+                    margin: 4px 2px;
+                    cursor: pointer;
+                  "
+                >
+                  Cancel
+                </button>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

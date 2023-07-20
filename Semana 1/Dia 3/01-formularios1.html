@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios - Parte 1</title>
+  </head>
+  <body>
+    <header>
+      <h1>Formularios - Parte 1</h1>
+    </header>
+    <main>
+      <section>
+        <form>
+          <fieldset>
+            <legend>Datos Personales</legend>
+            <div>
+              <label for="input-nombres-apellidos">Nombres y Apellidos</label>
+              <input id="input-nombres-apellidos" type="text" name="nombre"
+              placeholder="Ejemplo: Sara Gonzales""/>
+            </div>
+            <div>
+              <label for="input-edad">Edad:</label>
+              <input type="number" id="input-edad" name="edad" />
+            </div>
+            <div>
+              <label for="input-email">Correo Electronico</label>
+              <input type="email" id="input-email" name="correo" />
+            </div>
+            <div>
+              <label for="input_fecha_nav">Fecha de Nacimiento</label>
+              <input type="date" id="input_fecha_nav" name="fecha-nav" />
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Datos Secundarios</legend>
+            <div>
+              <label for="input-password">Password</label>
+              <input type="password" id="input-password" name="pass" />
+            </div>
+            <div>
+              <label for="color-favorito">Elija su color favorito: </label>
+              <input type="color" id="color-favorito" name="color-fav" />
+            </div>
+            <div>
+              <label for="salario">Salario: Entre 1500 y 5000</label>
+              <input
+                type="range"
+                id="salario"
+                min="1500"
+                max="5000"
+                name="salario"
+              />
+            </div>
+            <div>
+              <p>Hobbies</p>
+              <label for="chk-guitarra">Tocar la Guitarra</label>
+              <input
+                type="checkbox"
+                id="chk-guitarra"
+                name="guitarra"
+                value="cg"
+                checked
+              />
+              <br />
+              <label for="chk-football">Jugar Football</label>
+              <input
+                type="checkbox"
+                id="chk-football"
+                name="football"
+                value="cf"
+              />
+              <br />
+              <label for="chk-cocinar">Cocinar</label>
+              <input
+                type="checkbox"
+                id="chk-cocinar"
+                name="cocinar"
+                value="cc"
+              />
+            </div>
+            <div>
+              <p>Elija Tipo de Pago</p>
+              <label for="rd-credito">Tarjeta de Credito</label>
+              <input
+                type="radio"
+                id="rd-credito"
+                name="rd-tipopago"
+                value="tc"
+                checked
+              />
+              <br />
+              <label for="rd-debito">Tarjeta de Debito</label>
+              <input
+                type="radio"
+                id="rd-debito"
+                name="rd-tipopago"
+                value="td"
+              />
+              <br />
+              <label for="rd-efectivo">Pago Efectivo</label>
+              <input
+                type="radio"
+                id="rd-efectivo"
+                name="rd-tipopago"
+                value="pe"
+              />
+            </div>
+            <div>
+              <p>Turno</p>
+              <label for="tr-maniana">Mañana</label>
+              <input type="radio" id="tr-maniana" name="rd-turno" value="tm" />
+              <br />
+              <label for="tr-tarde">Tarde</label>
+              <input type="radio" id="tr-tarde" name="rd-turno" value="tt" />
+              <br />
+              <label for="tr-noche">Noche</label>
+              <input type="radio" id="tr-noche" name="rd-turno" value="tn" />
+            </div>
+            <div>
+              <label for="sel-pais">Elije Pais</label>
+              <select name="pais" id="sel-pais">
+                <option value="v-cero">Ninguno</option>
+                <option value="v-peru">Peru</option>
+                <option value="v-boliva">Bolivia</option>
+                <option value="v-chile">Chile</option>
+              </select>
+            </div>
+            <div>
+              <label for="txt-mensaje">Escriba su mensaje</label>
+              <br />
+              <textarea
+                name="mensaje"
+                id="txt-mensaje"
+                cols="30"
+                rows="10"
+                placeholder="Prueba"
+              ></textarea>
+            </div>
+            <div><label for="input-foto"></label> <input type="file" accept="image/png, image/jpeg"/></div>
+          </fieldset>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+
+/* propiedades de texto */
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+header {
+	font-size: 20px;
+}
+
+h1 {
+	font-family: cursive;
+	font-size: 3rem;
+}
+
+h2 {
+	font-family: 'Oswald';
+	font-weight: 400;
+}
+
+p {
+	font-style: italic;
+}
+
+.parrafo {
+	font: bold 1.5rem monospace;
+}
