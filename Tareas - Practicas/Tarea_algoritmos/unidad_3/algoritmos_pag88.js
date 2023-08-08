@@ -1,4 +1,6 @@
-/* 3.1 Realice un algoritmo para determinar si una persona puede votar con base en su edad en las próximas elecciones. Construya el diagra¬ma de flujo, el pseudocódigo y el diagrama N/S. */
+/* 3.1 Realice un algoritmo para determinar si una persona puede 
+votar con base en su edad en las próximas elecciones. Construya 
+el diagra¬ma de flujo, el pseudocódigo y el diagrama N/S. */
 const edadElecciones = () => {
   let edadPersona = parseInt(
     prompt("Ingrese la edad de la persona a sufragar")
@@ -10,7 +12,11 @@ const edadElecciones = () => {
   }
 };
 
-/* 3.2 Realice un algoritmo para determinar el sueldo semanal de un tra¬bajador con base en las horas trabajadas y el pago por hora, considerando que después de las 40 horas cada hora se considera como excedente y se paga el doble. Construya el diagrama de flujo, el pseudocódigo y el diagrama N/S. */
+/* 3.2 Realice un algoritmo para determinar el sueldo semanal de un 
+tra¬bajador con base en las horas trabajadas y el pago por hora, 
+considerando que después de las 40 horas cada hora se considera 
+como excedente y se paga el doble. Construya el diagrama de flujo, 
+el pseudocódigo y el diagrama N/S. */
 const sueldoSemanal = () => {
   const horaSemanales = 40;
   let horasTrabajadas = prompt("Ingrese las horas trabajados");
@@ -30,7 +36,7 @@ const sueldoSemanal = () => {
         pagoBase +
         " soles por " +
         horasBase +
-        " horas trabajadas \nPago extra de: " +
+        " horas trabajadas \nPago extra (doble) de: " +
         pagoExcedente +
         " soles por " +
         excendenteHora +
@@ -48,24 +54,120 @@ const sueldoSemanal = () => {
   }
 };
 
-/* 3.3 El 14 de febrero una persona desea comprarle un regalo al ser queri¬do que más aprecia en ese momento, su dilema radica en qué regalo puede hacerle, las alternativas que tiene son las siguientes:
+/* 3.3 El 14 de febrero una persona desea comprarle un regalo al ser 
+queri¬do que más aprecia en ese momento, su dilema radica en qué 
+regalo puede hacerle, las alternativas que tiene son las siguientes:
    Regalo 	Costo 
    Tarjeta 	$10.00 o menos 
    Chocolates 	$11.00 a $100.00 
    Flores 	$101.00 a $250.00 
    Anillo 	Más de $251.00 
-   Se requiere un diagrama de flujo con el algoritmo que ayude a de¬terminar qué regalo se le puede comprar a ese ser tan especial por el día del amor y la amistad. */
-// const 
+   Se requiere un diagrama de flujo con el algoritmo que ayude a 
+   de¬terminar qué regalo se le puede comprar a ese ser tan especial 
+   por el día del amor y la amistad. */
+const regaloSanValetin = () => {
+  let dineroDisponible = prompt(
+    "Ingrese dinero disponioble para comprar regalo San Valentin"
+  );
 
-/* 3.4 El dueño de un estacionamiento requiere un diagrama de flujo con el algoritmo que le permita determinar cuánto debe cobrar por el uso del estacionamiento a sus clientes. Las tarifas que se tienen son las siguientes: 
+  if (dineroDisponible <= 10) {
+    alert("Se sugiere regalar una Tarjeta de San Valentin");
+  } else if (dineroDisponible > 10 && dineroDisponible <= 100) {
+    alert("Se sugiere regalar Chocolates de San Valentin");
+  } else if (dineroDisponible > 100 && dineroDisponible <= 250) {
+    alert("Se sugiere regalar Flores de San Valentin");
+  } else {
+    alert("Se sugiere regalar un anillo de San Valentin");
+  }
+};
+
+/* 3.4 El dueño de un estacionamiento requiere un diagrama de 
+flujo con el algoritmo que le permita determinar cuánto debe 
+cobrar por el uso del estacionamiento a sus clientes. Las tarifas 
+que se tienen son las siguientes: 
    Las dos primeras horas a $5.00 c/u. 
    Las siguientes tres a $4.00 c/u. 
    Las cinco siguientes a $3.00 c/u. 
    Después de diez horas el costo por cada una es de dos pesos. */
+const horasEstacionamiento = () => {
+  let horasUso = parseInt(
+    prompt("Ingrese las horas de uso del estacionamiento")
+  );
+  let horasPrimera = 5;
+  let horasSegunda = 4;
+  let horasTercer = 3;
+  let horasFinal = 2;
 
-/* 3.5 Se tiene el nombre y la edad de tres personas. Se desea saber el nombre y la edad de la persona de menor edad. Realice el algoritmo correspondiente y represéntelo con un diagrama de flujo, pseudo¬código y diagrama N/S. */
+  if (horasUso < 3) {
+    horasTotal = horasUso * horasPrimera;
+    console.log(horasUso);
+    alert(
+      "La tarifa por las " +
+        horasUso +
+        " horas de uso es de: " +
+        horasTotal +
+        " soles"
+    );
+  } else if (horasUso >= 3 && horasUso < 6) {
+    let horasNueva = horasUso - 2;
+    horasTotal = horasNueva * horasSegunda + 10;
+    alert(
+      "La tarifa por las " +
+        horasUso +
+        " horas de uso es de: " +
+        horasTotal +
+        " soles"
+    );
+  } else if (horasUso >= 6 && horasUso < 11) {
+    let horasNueva = horasUso - 5;
+    horasTotal = horasNueva * horasTercer + 22;
+    alert(
+      "La tarifa por las " +
+        horasUso +
+        " horas de uso es de: " +
+        horasTotal +
+        " soles"
+    );
+  } else {
+    let horasNueva = horasUso - 10;
+    horasTotal = horasNueva * horasFinal + 37;
+    alert(
+      "La tarifa por las " +
+        horasUso +
+        " horas de uso es de: " +
+        horasTotal +
+        " soles"
+    );
+  }
+};
+
+/* 3.5 Se tiene el nombre y la edad de tres personas. Se desea 
+saber el nombre y la edad de la persona de menor edad. Realice 
+el algoritmo correspondiente y represéntelo con un diagrama de 
+flujo, pseudo¬código y diagrama N/S. */
+const menorEdad = () => {
+  let nombre1 = prompt("Ingrese el nombre de la primera persona");
+  let edad1 = prompt("Ingrese la edad de la primera persona");
+  let nombre2 = prompt("Ingrese el nombre de la segunda persona");
+  let edad2 = prompt("Ingrese la edad de la segunda persona");
+  let nombre3 = prompt("Ingrese el nombre de la tercera persona");
+  let edad3 = prompt("Ingrese la edad de la tercera persona");
+
+  if (edad1 < edad2) {
+    if (edad1 < edad3) {
+      alert(nombre1 + " es el de menor edad con " + edad1 + " años");
+    }
+  } else if (edad2 < edad3) {
+    alert(nombre2 + " es el de menor edad con " + edad2 + " años");
+  } else {
+    alert(nombre3 + " es el de menor edad con " + edad3 + " años");
+  }
+};
 
 /* 3.6 Realice el diagrama de flujo, el pseudocódigo y el diagrama N/S que muestren el algoritmo para determinar el costo y el descuento que tendrá un artículo. Considere que si su precio es mayor o igual a $200 se le aplica un descuento de 15%, y si su precio es mayor a $100 pero menor a $200, el descuento es de 12%, y si es menor a $100, sólo 10%. */
+// const descuentoProducto = () => {
+
+// };
 
 /* 3.7 El presidente de la república ha decidido estimular a todos los es¬tudiantes de una universidad mediante la asignación de becas mensuales, para esto se tomarán en consideración los siguientes criterios: 
 Para alumnos mayores de 18 años con promedio mayor o igual a 9, la beca será de $2000.00; con promedio mayor o igual a 7.5, de $1000.00; para los promedios menores de 7.5 pero mayores o igua¬les a 6.0, de $500.00; a los demás se les enviará una carta de invita-ción incitándolos a que estudien más en el próximo ciclo escolar. 
