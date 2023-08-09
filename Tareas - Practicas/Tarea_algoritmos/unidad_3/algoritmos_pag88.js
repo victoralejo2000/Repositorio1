@@ -164,14 +164,74 @@ const menorEdad = () => {
   }
 };
 
-/* 3.6 Realice el diagrama de flujo, el pseudocódigo y el diagrama N/S que muestren el algoritmo para determinar el costo y el descuento que tendrá un artículo. Considere que si su precio es mayor o igual a $200 se le aplica un descuento de 15%, y si su precio es mayor a $100 pero menor a $200, el descuento es de 12%, y si es menor a $100, sólo 10%. */
-// const descuentoProducto = () => {
+/* 3.6 Realice el diagrama de flujo, el pseudocódigo y el diagrama 
+N/S que muestren el algoritmo para determinar el costo y el descuento 
+que tendrá un artículo. Considere que si su precio es mayor o igual 
+a $200 se le aplica un descuento de 15%, y si su precio es mayor a 
+$100 pero menor a $200, el descuento es de 12%, y si es menor a $100, 
+sólo 10%. */
+const descuentoProducto = () => {
+  let costoArticulo = prompt("Ingrese el precio del producto");
+  if (costoArticulo <= 100) {
+    costoDescuento = costoArticulo - (costoArticulo * 10) / 100;
+    alert(
+      "El precio del producto es de " +
+        costoArticulo +
+        " soles y con un descuento del 10% quedando el precio en " +
+        costoDescuento +
+        " soles"
+    );
+  } else if (costoArticulo > 100 && costoArticulo < 200) {
+    costoDescuento = costoArticulo - (costoArticulo * 12) / 100;
+    alert(
+      "El precio del producto es de " +
+        costoArticulo +
+        " soles y con un descuento del 12% quedando el precio en " +
+        costoDescuento +
+        " soles"
+    );
+  } else {
+    costoDescuento = costoArticulo - (costoArticulo * 15) / 100;
+    alert(
+      "El precio del producto es de " +
+        costoArticulo +
+        " soles y con un descuento del 15% quedando el precio en " +
+        costoDescuento +
+        " soles"
+    );
+  }
+};
 
-// };
+/* 3.7 El presidente de la república ha decidido estimular a todos los 
+es¬tudiantes de una universidad mediante la asignación de becas mensuales, 
+para esto se tomarán en consideración los siguientes criterios: 
+Para alumnos mayores de 18 años con promedio mayor o igual a 9, la beca 
+será de $2000.00; con promedio mayor o igual a 7.5, de $1000.00; para los 
+promedios menores de 7.5 pero mayores o igua¬les a 6.0, de $500.00; a los 
+demás se les enviará una carta de invita-ción incitándolos a que estudien 
+más en el próximo ciclo escolar. 
+A los alumnos de 18 años o menores de esta edad, con promedios mayores o 
+iguales a 9, se les dará $3000; con promedios menores a 9 pero mayores o 
+iguales a 8, $2000; para los alumnos con prome¬dios menores a 8 pero mayores 
+o iguales a 6, se les dará $100, y a los alumnos que tengan promedios menores 
+a 6 se les enviará carta de invitación. Realice el algoritmo correspondiente 
+y represéntelo con un diagrama de flujo. */
 
-/* 3.7 El presidente de la república ha decidido estimular a todos los es¬tudiantes de una universidad mediante la asignación de becas mensuales, para esto se tomarán en consideración los siguientes criterios: 
-Para alumnos mayores de 18 años con promedio mayor o igual a 9, la beca será de $2000.00; con promedio mayor o igual a 7.5, de $1000.00; para los promedios menores de 7.5 pero mayores o igua¬les a 6.0, de $500.00; a los demás se les enviará una carta de invita-ción incitándolos a que estudien más en el próximo ciclo escolar. 
-A los alumnos de 18 años o menores de esta edad, con promedios mayores o iguales a 9, se les dará $3000; con promedios menores a 9 pero mayores o iguales a 8, $2000; para los alumnos con prome¬dios menores a 8 pero mayores o iguales a 6, se les dará $100, y a los alumnos que tengan promedios menores a 6 se les enviará carta de invitación. Realice el algoritmo correspondiente y represéntelo con un diagrama de flujo. */
+// estudiante > 18
+// promedio >= 9 beca 2000
+// promedio >= 7.5 beca 1000
+// promedio < 7.5 y <=6 beca 500
+// promedio < 6 carta invitacion estudien proximo ciclo escolar
+// estudiante <= 18
+// promedio >= 9 beca 3000
+// promedio >= 8 beca 2000
+// promedio < 8 y <=6 beca 100
+// promedio < 6 carta invitacion estudien proximo ciclo escolar
+
+let edadEstudiante=("Ingrese edad del estudiante");
+let promedioNota=("Ingrese la nota promedio del ciclo");
+
+
 
 /* 3.8 Cierta empresa proporciona un bono mensual a sus trabajadores, el cual puede ser por su antigüedad o bien por el monto de su sueldo (el que sea mayor), de la siguiente forma: 
 Cuando la antigüedad es mayor a 2 años pero menor a 5, se otorga 20 % de su sueldo; cuando es de 5 años o más, 30 %. Ahora bien, el bono por concepto de sueldo, si éste es menor a $1000, se da 25 % de éste, cuando éste es mayor a $1000, pero menor o igual a $3500, se otorga 15% de su sueldo, para más de $3500. 10%. Realice el algoritmo correspondiente para calcular los dos tipos de bono, asig¬nando el mayor, y represéntelo con un diagrama de flujo y pseudo¬código. */
