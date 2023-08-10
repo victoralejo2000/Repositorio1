@@ -216,27 +216,196 @@ iguales a 8, $2000; para los alumnos con prome¬dios menores a 8 pero mayores
 o iguales a 6, se les dará $100, y a los alumnos que tengan promedios menores 
 a 6 se les enviará carta de invitación. Realice el algoritmo correspondiente 
 y represéntelo con un diagrama de flujo. */
+const promedioEstudiante = () => {
+  let edadEstudiante = parseInt(prompt("Ingrese edad del estudiante"));
+  let promedioNota = prompt("Ingrese la nota promedio del ciclo");
 
-// estudiante > 18
-// promedio >= 9 beca 2000
-// promedio >= 7.5 beca 1000
-// promedio < 7.5 y <=6 beca 500
-// promedio < 6 carta invitacion estudien proximo ciclo escolar
-// estudiante <= 18
-// promedio >= 9 beca 3000
-// promedio >= 8 beca 2000
-// promedio < 8 y <=6 beca 100
-// promedio < 6 carta invitacion estudien proximo ciclo escolar
+  if (edadEstudiante > 18) {
+    if (promedioNota >= 9) {
+      alert("El estudiante tiene una beca de $ 2000");
+    } else if (promedioNota < 9 && promedioNota >= 7.5) {
+      alert("El estudiante tiene una beca de $ 1000");
+    } else if (promedioNota < 7.5 && promedioNota >= 6) {
+      alert("El estudiante tiene una beca de $ 500");
+    } else {
+      alert(
+        "El estudiante tiene una carta de invitacion para continuar sus estudios el proximo ciclo"
+      );
+    }
+  } else {
+    if (promedioNota >= 9) {
+      alert("El estudiante tiene una beca de $ 3000");
+    } else if (promedioNota < 9 && promedioNota >= 8) {
+      alert("El estudiante tiene una beca de $ 2000");
+    } else if (promedioNota < 8 && promedioNota >= 6) {
+      alert("El estudiante tiene una beca de $ 100");
+    } else {
+      alert(
+        "El estudiante tiene una carta de invitacion para continuar sus estudios el proximo ciclo"
+      );
+    }
+  }
+};
 
-let edadEstudiante=("Ingrese edad del estudiante");
-let promedioNota=("Ingrese la nota promedio del ciclo");
+/* 3.8 Cierta empresa proporciona un bono mensual a sus trabajadores, 
+el cual puede ser por su antigüedad o bien por el monto de su sueldo 
+(el que sea mayor), de la siguiente forma: 
+Cuando la antigüedad es mayor a 2 años pero menor a 5, se otorga 20 % 
+de su sueldo; cuando es de 5 años o más, 30 %. Ahora bien, el bono por 
+concepto de sueldo, si éste es menor a $1000, se da 25 % de éste, cuando 
+éste es mayor a $1000, pero menor o igual a $3500, se otorga 15% de su 
+sueldo, para más de $3500. 10%. Realice el algoritmo correspondiente 
+para calcular los dos tipos de bono, asig¬nando el mayor, y represéntelo 
+con un diagrama de flujo y pseudo¬código. */
+const bonoMensualTrabajador = () => {
+  let bonoAntiguedad = 0;
+  let bonoSueldo = 0;
+  let antiguedadTrabajo = parseInt(
+    prompt("Ingrese el tiempo de antiguedad del trabajador: ")
+  );
+  let sueldoTrabajador = prompt("Ingrese su sueldo actual: ");
 
+  if (antiguedadTrabajo >= 2 && antiguedadTrabajo <= 5) {
+    bonoAntiguedad = (sueldoTrabajador * 20) / 100;
+  } else if (antiguedadTrabajo > 5) {
+    bonoAntiguedad = (sueldoTrabajador * 30) / 100;
+  }
+  // else {
+  //   alert(
+  //     "Para beneficio del Bono, el tiempo de antiguedad es apartir de los 2 años a mas"
+  //   );
+  // }
 
+  if (sueldoTrabajador <= 1000) {
+    bonoSueldo = (sueldoTrabajador * 25) / 100;
+  } else if (sueldoTrabajador > 1000 && sueldoTrabajador <= 3500) {
+    bonoSueldo = (sueldoTrabajador * 15) / 100;
+  } else if (sueldoTrabajador > 3500) {
+    bonoSueldo = (sueldoTrabajador * 10) / 100;
+  }
 
-/* 3.8 Cierta empresa proporciona un bono mensual a sus trabajadores, el cual puede ser por su antigüedad o bien por el monto de su sueldo (el que sea mayor), de la siguiente forma: 
-Cuando la antigüedad es mayor a 2 años pero menor a 5, se otorga 20 % de su sueldo; cuando es de 5 años o más, 30 %. Ahora bien, el bono por concepto de sueldo, si éste es menor a $1000, se da 25 % de éste, cuando éste es mayor a $1000, pero menor o igual a $3500, se otorga 15% de su sueldo, para más de $3500. 10%. Realice el algoritmo correspondiente para calcular los dos tipos de bono, asig¬nando el mayor, y represéntelo con un diagrama de flujo y pseudo¬código. */
+  if (bonoAntiguedad > bonoSueldo) {
+    alert(
+      "El bono correspondiente a su antiguedad es de: " +
+        bonoAntiguedad +
+        "\nEl bono correspondiente a su sueldo es de: " +
+        bonoSueldo +
+        "\n\nEl bono con monto mayor para su asignacion es de: " +
+        bonoAntiguedad
+    );
+  } else if (bonoSueldo > bonoAntiguedad) {
+    alert(
+      "El bono correspondiente a su antiguedad es de: " +
+        bonoAntiguedad +
+        "\nEl bono correspondiente a su sueldo es de: " +
+        bonoSueldo +
+        "\n\nEl bono con monto mayor para su asignacion es de: " +
+        bonoSueldo
+    );
+  }
+};
 
-/* 3.9 Una compañía de seguros para autos ofrece dos tipos de póliza: co¬bertura amplia (A) y daños a terceros (B). Para el plan A, la cuota base es de $1,200, y para el B, de $950. A ambos planes se les carga 10% del costo si la persona que conduce tiene por hábito beber alco¬hol, 5% si utiliza lentes, 5% si padece alguna enfermedad –como de¬ficiencia cardiaca o diabetes–, y si tiene más de 40 años, se le carga 20%, de lo contrario sólo 10%. Todos estos cargos se realizan sobre el costo base. Realice diagrama de flujo y diagrama N/S que repre¬sente el algoritmo para determinar cuánto le cuesta a una persona contratar una póliza. */
+/* 3.9 Una compañía de seguros para autos ofrece dos tipos de póliza: 
+co¬bertura amplia (A) y daños a terceros (B). Para el plan A, la cuota 
+base es de $1,200, y para el B, de $950. 
+A ambos planes se les carga 10% del costo si la persona que conduce 
+tiene por hábito beber alco¬hol, 5% si utiliza lentes, 5% si padece 
+alguna enfermedad –como de¬ficiencia cardiaca o diabetes–, y si tiene 
+más de 40 años, se le carga 20%, de lo contrario sólo 10%. Todos estos 
+cargos se realizan sobre el costo base. Realice diagrama de flujo y 
+diagrama N/S que repre¬sente el algoritmo para determinar cuánto le 
+cuesta a una persona contratar una póliza. */
+const companiaSeguro = () => {
+  let polizaA = "Cobertura amplia (A)";
+  let basePlanA = 1200;
+  let polizaB = "Daños a terceros (B)";
+  let basePlanB = 950;
+  let contratoPolizaA,
+    bebedorPolizaA,
+    lentesPolizaA,
+    enfermedadPolizaA,
+    edadPolizaA = 0;
+  let contratoPolizaB,
+    bebedorPolizaB,
+    lentesPolizaB,
+    enfermedadPolizaB,
+    edadPolizaB = 0;
+
+  let bebeAlcohol = prompt(
+    "El cliente tiene habito de beber alcohol? \nSI (S) o NO (N)"
+  ).toUpperCase();
+  let utilizaLentes = prompt(
+    "El cliente utiliza lentes? \nSI (S) o NO (N)"
+  ).toUpperCase();
+  let padeceEnfermedad = prompt(
+    "El cliente padece alguna enfermedad como Deficiencia Cardiaca o Diabetes"
+  ).toUpperCase();
+  let edadCliente = parseInt(prompt("Ingrese la edad del cliente: "));
+
+  if (bebeAlcohol === "S") {
+    console.log("hola bebedor");
+    bebedorPolizaA = (basePlanA * 10) / 100;
+    bebedorPolizaB = (basePlanB * 10) / 100;
+    console.log("Contrato Poliza A - Bebedor: ", bebedorPolizaA);
+    console.log("Contrato Poliza B - Bebedor: ", bebedorPolizaB);
+  } else {
+    console.log("hola NO bebedor");
+    bebedorPolizaA = 0;
+    bebedorPolizaB = 0;
+    console.log("Contrato Poliza A - Bebedor: ", bebedorPolizaA);
+    console.log("Contrato Poliza B - Bebedor: ", bebedorPolizaB);
+  }
+
+  if (utilizaLentes === "S") {
+    console.log("hola cuatro ojos");
+    lentesPolizaA = (basePlanA * 5) / 100;
+    lentesPolizaB = (basePlanB * 5) / 100;
+    console.log("Contrato Poliza A - Lentes: ", lentesPolizaA);
+    console.log("Contrato Poliza B - Lentes: ", lentesPolizaB);
+  } else {
+    console.log("hola visor");
+    lentesPolizaA = 0;
+    lentesPolizaB = 0;
+    console.log("Contrato Poliza A - Lentes: ", lentesPolizaA);
+    console.log("Contrato Poliza B - Lentes: ", lentesPolizaB);
+  }
+
+  if (padeceEnfermedad === "S") {
+    console.log("hola enfermo");
+    enfermedadPolizaA = (basePlanA * 5) / 100;
+    enfermedadPolizaB = (basePlanB * 5) / 100;
+    console.log("Contrato Poliza A - Enfermo: ", enfermedadPolizaA);
+    console.log("Contrato Poliza B - Enfermo: ", enfermedadPolizaB);
+  } else {
+    console.log("hola sano");
+    enfermedadPolizaA = 0;
+    enfermedadPolizaB = 0;
+    console.log("Contrato Poliza A - Enfermo: ", enfermedadPolizaA);
+    console.log("Contrato Poliza B - Enfermo: ", enfermedadPolizaB);
+  }
+
+  if (edadCliente > 40) {
+    edadPolizaA = (basePlanA * 20) / 100;
+    edadPolizaB = (basePlanB * 20) / 100;
+  } else {
+    edadPolizaA = (basePlanA * 10) / 100;
+    edadPolizaB = (basePlanB * 10) / 100;
+  }
+
+  contratoPolizaA =
+    basePlanA +
+    bebedorPolizaA +
+    lentesPolizaA +
+    enfermedadPolizaA +
+    edadPolizaA;
+  contratoPolizaB =
+    basePlanB +
+    bebedorPolizaB +
+    lentesPolizaB +
+    enfermedadPolizaB +
+    edadPolizaB;
+
+};
 
 /* 3.10 Represente un algoritmo mediante un diagrama de flujo y el pseu¬docódigo para determinar a qué lugar podrá ir de vacaciones una persona, considerando que la línea de autobuses “La tortuga” cobra por kilómetro recorrido. Se debe considerar el costo del pasaje tanto de ida, como de vuelta; los datos que se conocen y que son fijos son: México, 750 km; P.V., 800 km; Acapulco, 1200 km, y Cancún, 1800 km. También se debe considerar la posibilidad de tener que quedar¬se en casa. */
 
