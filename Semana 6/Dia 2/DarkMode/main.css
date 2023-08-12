@@ -1,0 +1,50 @@
+/* variable en css */
+:root{
+    --clr-bcg:#fff;
+    --clr-font:#282c35;
+    --clr-primary:#d23669;
+}
+
+.dark-them{
+    --clr-bcg:#282c35;
+    --clr-font:#fff;
+    --clr-primary:#d23669;
+    font-size: 40px;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: var(--clr-bcg);
+  color: var(--clr-font);
+  line-height: 1.5;
+  font-size: 0.875rem;
+  transition: all 0.3s linear;
+}
+
+.nav-center{
+    width: 90vh;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.nav-center span{
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+.btn{
+    background-color: var(--clr-primary);
+    color: var(--clr-bcg);
+    border: transparent;
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+    letter-spacing: 2px;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 10px;
+}
