@@ -1,0 +1,38 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  /* The image used */
+  background-image: url(./pokemon.jpg);
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.card {
+  background-color: none;
+}
+
+.modal-datos, .modal-datos-descrp {
+  display: flex;
+}
+.div1 {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.div2 {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.div3 {
+  flex: 1 1 auto;
+  text-align: center;
+}
